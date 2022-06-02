@@ -13,7 +13,7 @@ jobs:
           #username: ${{ github.repository_owner }}
           username: ${{ github.repository_owner }}
           #password: ${{ secrets.GHCR_IO_TOKEN }}
-          password: ${{ secrets.GHCRIOTOKEN }}
+          password: ${{ secrets.GHCR_IO_TOKEN }}
       - name: Docker pull and push
         run: |
           docker login ghcr.io -u fanggege123 -p "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"
