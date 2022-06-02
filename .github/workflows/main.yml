@@ -13,6 +13,39 @@ jobs:
           password: ${{ secrets.GHCR_IO_TOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.25.0@sha256:81cd1c93a2e2027d01c764a78b8fc2f7aa511370643e764836334d0ea09328cf
-          docker tag  gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.25.0@sha256:81cd1c93a2e2027d01c764a78b8fc2f7aa511370643e764836334d0ea09328cf ghcr.io/fanggege123/dashboard:v0.25.0  
-          docker push ghcr.io/fanggege123/dashboard:v0.25.0
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.25.0@sha256:45fab6927dc0fd49217d000882967633f5f08d2c4810455f3a180d912a854efb
+          docker tag  gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.25.0@sha256:45fab6927dc0fd49217d000882967633f5f08d2c4810455f3a180d912a854efb ghcr.io/fanggege123/kubeconfigwriter:v0.25.0  
+          docker push ghcr.io/fanggege123/kubeconfigwriter:v0.25.0
+          
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.25.0@sha256:b963f6e7a69617db57b685893256f978436277094c21d43b153994acd8a01247
+          docker tag  gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.25.0@sha256:b963f6e7a69617db57b685893256f978436277094c21d43b153994acd8a01247 ghcr.io/fanggege123/git-init:v0.25.0  
+          docker push ghcr.io/fanggege123/git-init:v0.25.0
+          
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.25.0@sha256:31edf8ac33866b10ddaf0684a9b32231e22cae5a4f582e9dad8db07af7e6a44e
+          docker tag  gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.25.0@sha256:31edf8ac33866b10ddaf0684a9b32231e22cae5a4f582e9dad8db07af7e6a44e ghcr.io/fanggege123/entrypoint:v0.25.0  
+          docker push ghcr.io/fanggege123/entrypoint:v0.25.0
+          
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.25.0@sha256:abab111dae68c309fa9d91e202d145c1eea8c6cd47aee760134e9e82e2aaca98
+          docker tag  gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.25.0@sha256:abab111dae68c309fa9d91e202d145c1eea8c6cd47aee760134e9e82e2aaca98 ghcr.io/fanggege123/nop:v0.25.0 
+          docker push ghcr.io/fanggege123/nop:v0.25.0
+          
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/imagedigestexporter:v0.25.0@sha256:5cab9f39c5c60f3b5762426a84d363a7569878fa7642b5efe295c38c637b0a6f
+          docker tag  gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/imagedigestexporter:v0.25.0@sha256:5cab9f39c5c60f3b5762426a84d363a7569878fa7642b5efe295c38c637b0a6f ghcr.io/fanggege123/imagedigestexporter:v0.25.0  
+          docker push ghcr.io/fanggege123/imagedigestexporter:v0.25.0
+          
+          docker pull gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/pullrequest-init:v0.25.0@sha256:6b308d23473b323a93c01888820f774578eaf35b7305d77cddd6039266c8ea0d
+          docker tag  gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/pullrequest-init:v0.25.0@sha256:6b308d23473b323a93c01888820f774578eaf35b7305d77cddd6039266c8ea0d ghcr.io/fanggege123/pullrequest-init:v0.25.0
+          docker push ghcr.io/fanggege123/pullrequest-init:v0.25.0
+          
+          docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:302.0.0-slim
+          docker tag  gcr.io/google.com/cloudsdktool/cloud-sdk:302.0.0-slim ghcr.io/fanggege123/cloud-sdk:302.0.0-slim 
+          docker push ghcr.io/fanggege123/cloud-sdk:302.0.0-slim
+          
+          docker pull gcr.io/distroless/base:debug
+          docker tag gcr.io/distroless/base:debug   ghcr.io/fanggege123/base:debug 
+          docker push ghcr.io/fanggege123/base:debug
+          
+          
+          
+          
+          
